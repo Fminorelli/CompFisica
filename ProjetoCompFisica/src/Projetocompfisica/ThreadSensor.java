@@ -28,7 +28,8 @@ public class ThreadSensor extends Thread{
     public void run(){
         AcessaArduino arduino = new AcessaArduino();
         int acende = 399;
-        long tempo = 0;
+        long tempoinicial = 0;
+        long tempo;
         boolean flag = false;
          try {
             
@@ -49,10 +50,11 @@ public class ThreadSensor extends Thread{
                 if(var > acende){
                     System.out.println("entrei no var> acende ");
                     if(flag == true){
-                        System.out.println("entrei na flag true. Flag: "+ flag);
-                    tempo=tempo-System.currentTimeMillis();
-                    tempo=tempo*-1;
-                    tempo=TimeUnit.MILLISECONDS.toSeconds(tempo);
+                        System.out.println("entrei na flag true. Flag: "+ flag+ "Tempo inicial:"+ tempoinicial);
+                    tempo=System.currentTimeMillis()-tempoinicial;
+                        System.out.println("TEMPO:"+tempo +"DEPOIS DE TIRAR O INICIAL :"+tempo);
+                    tempo = tempo/1000;
+                        System.out.println("TEMPO FINAL EM SERGUNDOS: ");
                     flag = false;
                     
                     
@@ -63,12 +65,12 @@ public class ThreadSensor extends Thread{
                      aux.setNumLampada(5);
                      aux.setTempoAceso(acende);
                      aux.setTempoAceso(tempo);
-                     manager.persist(aux);
+                     //manager.persist(aux);
                                          }
 
                 }
                 else if (var < acende){
-                    tempo=System.currentTimeMillis();
+                    tempoinicial=System.currentTimeMillis();
                     flag = true;
                 
                 
