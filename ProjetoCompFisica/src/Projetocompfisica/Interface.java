@@ -240,7 +240,8 @@ public class Interface extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      Grafico g= new Grafico("Teste", "Teste1");
      g.setVisible(true);
-       
+     Tabela t = new Tabela();
+     t.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
