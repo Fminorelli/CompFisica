@@ -36,6 +36,10 @@ public class Tabela extends javax.swing.JFrame {
         k4.setText(Float.toString(t4));
         v4.setText("R$"+Float.toString((float) ((t4/1000)*0.667442)));
         
+        float t5=(manager.soma(5).floatValue()/360)*15;
+        k5.setText(Float.toString(t5));
+        v5.setText("R$"+Float.toString((float) ((t4/1000)*0.667442)*4));
+        
         
     }
 
@@ -62,11 +66,11 @@ public class Tabela extends javax.swing.JFrame {
         v2 = new javax.swing.JLabel();
         v3 = new javax.swing.JLabel();
         i4 = new javax.swing.JLabel();
-        k4 = new javax.swing.JLabel();
         v4 = new javax.swing.JLabel();
         i5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        k5 = new javax.swing.JLabel();
         v5 = new javax.swing.JLabel();
+        k4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,17 +80,37 @@ public class Tabela extends javax.swing.JFrame {
 
         i1.setText("Quarto ");
 
-        i3.setText(" Sala");
+        i3.setText("Sala");
 
         i2.setText("Cozinha");
 
         jLabel6.setText("kW Consumidos");
 
+        k1.setText("k1");
+
+        k2.setText("k2");
+
+        k3.setText("k3");
+
         jLabel10.setText("Valor");
+
+        v1.setText("v1");
+
+        v2.setText("v2");
+
+        v3.setText("v3");
 
         i4.setText("Suite");
 
+        v4.setText("v4");
+
         i5.setText("Jardim");
+
+        k5.setText("k5");
+
+        v5.setText("v4");
+
+        k4.setText("k4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,54 +119,32 @@ public class Tabela extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jLabel1))
+                    .addComponent(i2)
+                    .addComponent(i1)
+                    .addComponent(i4)
+                    .addComponent(jLabel2)
+                    .addComponent(i5)
+                    .addComponent(i3))
+                .addGap(138, 138, 138)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(k3)
+                    .addComponent(k4)
+                    .addComponent(k2)
+                    .addComponent(k1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(i2)
-                            .addComponent(i1)
-                            .addComponent(i3)
-                            .addComponent(i4)
-                            .addComponent(jLabel2)
-                            .addComponent(i5))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(97, 97, 97)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(k3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(v3))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(k2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(v2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(k4)
-                                                .addGap(81, 81, 81))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                                .addComponent(jLabel4)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(v5)
-                                            .addComponent(v4)))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(97, 97, 97)
-                                        .addComponent(k1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(v1))))))
-                .addContainerGap(94, Short.MAX_VALUE))
+                            .addComponent(jLabel6)
+                            .addComponent(k5))
+                        .addGap(103, 103, 103)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(v5)
+                            .addComponent(v1)
+                            .addComponent(jLabel10)
+                            .addComponent(v2)
+                            .addComponent(v3)
+                            .addComponent(v4))))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,39 +153,34 @@ public class Tabela extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(k1)
                     .addComponent(v1)
                     .addComponent(i1))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(k2)
-                            .addComponent(v2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(k3)
-                            .addComponent(v3))
-                        .addGap(12, 12, 12)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(k4)
-                            .addComponent(v4)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(i2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(i3)
-                        .addGap(18, 18, 18)
-                        .addComponent(i4)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(i2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(k2)
+                    .addComponent(v2))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(i3)
+                    .addComponent(k3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(v3))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(i4)
+                    .addComponent(v4)
+                    .addComponent(k4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(i5)
-                    .addComponent(jLabel4)
-                    .addComponent(v5))
+                    .addComponent(v5)
+                    .addComponent(k5))
                 .addContainerGap())
         );
 
@@ -237,12 +234,12 @@ public class Tabela extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel k1;
     private javax.swing.JLabel k2;
     private javax.swing.JLabel k3;
     private javax.swing.JLabel k4;
+    private javax.swing.JLabel k5;
     private javax.swing.JLabel v1;
     private javax.swing.JLabel v2;
     private javax.swing.JLabel v3;
