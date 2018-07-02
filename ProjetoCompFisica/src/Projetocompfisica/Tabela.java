@@ -17,6 +17,7 @@ public class Tabela extends javax.swing.JFrame {
      * Creates new form Tabela
      */
     public Tabela() {
+       
         initComponents();
         IluminaçaoDao  manager = new IluminaçaoDao();
                 // Tempo em minutos > pra hora > * a voltagem
