@@ -6,6 +6,10 @@
 package Projetocompfisica;
 
 import Arduino.AcessaArduino;
+import Banco.Iluminaçao;
+import Banco.IluminaçaoDao;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -23,6 +27,9 @@ public class ThreadSensor extends Thread{
     @Override
     public void run(){
         AcessaArduino arduino = new AcessaArduino();
+        int acende = 399;
+        long tempo = 0;
+        boolean flag = false;
          try {
             
             System.out.println("porta detectada: " + arduino.getPortaSelecionada());
@@ -36,7 +43,36 @@ public class ThreadSensor extends Thread{
                 String sensor;
                 sensor = acesso.getDadosArduino();
                 System.out.println("sensor: "+sensor);
-                ThreadSensor.sleep(2000);
+                ThreadSensor.sleep(1500);
+                int var = Integer.parseInt(sensor); 
+                System.out.println("var: "+var);
+                if(var > acende){
+                    System.out.println("entrei no var> acende ");
+                    if(flag == true){
+                        System.out.println("entrei na flag true. Flag: "+ flag);
+                    tempo=tempo-System.currentTimeMillis();
+                    tempo=tempo*-1;
+                    tempo=TimeUnit.MILLISECONDS.toSeconds(tempo);
+                    flag = false;
+                    
+                    
+                    System.out.println("temoi: "+tempo);
+                        System.out.println("flag "+ flag);
+                    IluminaçaoDao  manager = new IluminaçaoDao();
+                     Iluminaçao aux = new Iluminaçao();
+                     aux.setNumLampada(5);
+                     aux.setTempoAceso(acende);
+                     aux.setTempoAceso(tempo);
+                     manager.persist(aux);
+                                         }
+
+                }
+                else if (var < acende){
+                    tempo=System.currentTimeMillis();
+                    flag = true;
+                
+                
+                }
             } catch (InterruptedException ex) {
                 Logger.getLogger(ThreadSensor.class.getName()).log(Level.SEVERE, null, ex);
             }
