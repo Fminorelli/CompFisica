@@ -42,7 +42,7 @@ public class ThreadSensor extends Thread{
             try {
                 String sensor;
                 sensor = acesso.getDadosArduino();
-                //System.out.println("sensor: "+sensor);
+                System.out.println("sensor: "+sensor);
                 ThreadSensor.sleep(1500);
                 int var = Integer.parseInt(sensor); 
                 //System.out.println("var: "+var);
