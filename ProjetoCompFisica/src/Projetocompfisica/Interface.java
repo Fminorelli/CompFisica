@@ -11,6 +11,7 @@ import Banco.IluminaçaoDao;
 import java.awt.Color;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import javax.swing.JFrame;
 
     
 /**
@@ -159,10 +160,12 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Grafico g= new Grafico("Teste", "Teste1");
+        Grafico g= new Grafico("Teste", "Relação Tempo x Iluminação");
         g.setVisible(true);
+        g.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         Tabela t = new Tabela();
         t.setVisible(true);
+        t.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void botao4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao4ActionPerformed
