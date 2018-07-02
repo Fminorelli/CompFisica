@@ -24,58 +24,58 @@ void loop() {
     char inChar = (char)Serial.read(); // Lê os dados da porta serial
     inputString += inChar;            // Cria uma string com todos os caracteres vindos da porta serial
     }
-    Serial.println(inputString);
+   // Serial.println(inputString);
     
     while (Serial.available() > 0){   
       junk = Serial.read() ; }        // Limpa o buffer serial
       
       if(inputString == "1"){         // Caso o dado lido seja "1"
         digitalWrite(2, HIGH);
-        Serial.println("led1 on"); // Liga o led na porta "2"
+         // Liga o led na porta "2"
       }
       
       else if(inputString == "2"){   // Caso o dado lido seja "2"
         digitalWrite(2, LOW);       // Desliga o led na porta "2"
-      Serial.println("led1 off");
+      
       }
     
       if(inputString == "3"){       // Caso o dado lido seja "3"
         digitalWrite(3, HIGH);// Liga o led na porta "3"
-        Serial.println("led2 on");
+        
       }
       
       else if(inputString == "4"){   // Caso o dado lido seja "4"
         digitalWrite(3, LOW);       // Desliga o led na porta "4"
-        Serial.println("led2 off");
+        
       }
       
       if(inputString == "5"){       // Caso o dado lido seja "5"
         digitalWrite(4, HIGH);      // Liga o led na porta "5"
-        Serial.println("led3 on");
+        
       }
         
       else if(inputString == "6"){   // Caso o dado lido seja "6"
         digitalWrite(4, LOW);       // Desliga o led na porta "6"
-        Serial.println("led3 off");
+        
       }
       
       if(inputString == "7"){       // Caso o dado lido seja "7"
         digitalWrite(5, HIGH);      // Liga o led na porta "7"
-        Serial.println("led4 on");
+        
       }
         
       else if(inputString == "8"){   // Caso o dado lido seja "8"
         digitalWrite(5, LOW);       // Desliga o led na porta "8"
-        Serial.println("led4 off");
+        
       }
         inputString = "";
       }
     
     sensorValue = analogRead(analogInPin); // Faz a leitura do pino analógico
   
-    Serial.print("sensor =" );            // Imprime o resultado no monitor serial
+    //Serial.print("sensor =" );            // Imprime o resultado no monitor serial
     Serial.println(sensorValue);
-    delay(500);
+    delay(2000);
           
   
     if(sensorValue >400 ){                // Caso o valor do sensor LDR seja >400

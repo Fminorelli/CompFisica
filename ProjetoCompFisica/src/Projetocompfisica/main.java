@@ -43,8 +43,8 @@ public class main {
         //System.out.println("teste lista: "+ lista.get(1).getNumLampada() + lista.get(1).getTempoAceso());
         System.out.println("fim teste banco");
         
-        ThreadSensor sensor = new ThreadSensor();
-        sensor.start();
+        //ThreadSensor sensor = new ThreadSensor();
+        //sensor.start();
     }
     
 }

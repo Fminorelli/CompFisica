@@ -14,6 +14,12 @@ import java.util.logging.Logger;
  * @author wesle
  */
 public class ThreadSensor extends Thread{
+    AcessaArduino acesso;
+   public ThreadSensor(AcessaArduino arduinoo) {
+       // store parameter for later user
+       this.acesso = arduinoo;
+   }
+    
     @Override
     public void run(){
         AcessaArduino arduino = new AcessaArduino();
@@ -28,8 +34,8 @@ public class ThreadSensor extends Thread{
          while(true){
             try {
                 String sensor;
-                sensor = arduino.getDadosArduino();
-                //System.out.println("sensor");
+                sensor = acesso.getDadosArduino();
+                System.out.println("sensor: "+sensor);
                 ThreadSensor.sleep(2000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(ThreadSensor.class.getName()).log(Level.SEVERE, null, ex);
